@@ -4,9 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lsy.entity.UserEntity;
 import com.lsy.server.UserService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/user")
-@Tag(name = "用户慕课", description = "描述")
+@Tag(name = "用户", description = "描述")
 public class UserApi {
 
     @Autowired

@@ -8,7 +8,10 @@ spring:
     username: testuser
     password: ABC123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+# 禁用 Swagger UI
+springdoc:
+  swagger-ui:
+    enabled: true
 # MyBatis-Plus 配置
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml  # 指定 Mapper XML 文件路径

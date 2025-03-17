@@ -15,6 +15,13 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+
+    public String getUserInfoByNameAndPassword(String loginName, String password) {
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("loginName", loginName).eq("password", password);
+        return userMapper.selectOne(queryWrapper).getLoginName();
+    }
+
     public UserEntity getUserInfo(String loginName, String password) {
         QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("loginName", loginName).eq("password", password);

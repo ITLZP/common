@@ -1,12 +1,14 @@
 package com.lsy.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @TableName(value = "user_td")
 @Data
+@Builder
 public class UserEntity {
     private Integer id;
 
